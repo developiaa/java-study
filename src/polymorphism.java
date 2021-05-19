@@ -38,3 +38,10 @@ class Child extends Parent {
     }
 }
 
+//p.x = 100
+//p.k = 400
+//Child Method
+//
+//c.x = 200
+//p.k = 500
+//Child Method
