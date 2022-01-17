@@ -7,7 +7,7 @@ public class Bot {
         this.serving = serving;
     }
 
-    public void move_bot(){
+    public void move_bot() {
         serving.serve();
     }
 }

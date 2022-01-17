@@ -1,6 +1,6 @@
 package designpattern.command.third;
 
-public class MakeCommand implements Command{
+public class MakeCommand implements Command {
     private Make make;
 
     //외부에서 의존성 주입

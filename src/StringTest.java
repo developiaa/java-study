@@ -2,9 +2,9 @@ public class StringTest {
     public static void main(String[] args) {
         // String 클래스의 경우 immutable하기 때문에 값을 추가할 경우 새로운 메모리로 할당
         // 문자열의 추가/수정/삭제와 같은 작업이 빈번할 경우 힙 메모리에 많은 가비지가 발생하여 성능악화
-        String s1="aa"; // String s1 = new String("aa");
+        String s1 = "aa"; // String s1 = new String("aa");
         System.out.println(System.identityHashCode(s1));
-        s1+="bb";
+        s1 += "bb";
         System.out.println(System.identityHashCode(s1));
 
         // StringBuilder와 StringBuffer는 mutable(가변성)하다.

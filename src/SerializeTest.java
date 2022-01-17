@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 public class SerializeTest {
     public static void main(String[] args) {
-        Member member = new Member("name","email",12);
+        Member member = new Member("name", "email", 12);
         byte[] serializedMember;
 
         try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
@@ -21,7 +21,7 @@ public class SerializeTest {
 }
 
 // Member 클래스를 직렬화
-class Member implements Serializable{
+class Member implements Serializable {
     private static final long serialVersionUID = 1L;
     private transient String name;
     private String email;

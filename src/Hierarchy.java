@@ -1,9 +1,11 @@
 import java.util.ArrayList;
 
 class MaterialObject {
-    public void doPrint(){
+    public void doPrint() {
         System.out.println("object");
-    };
+    }
+
+    ;
 }
 
 class Material extends MaterialObject {

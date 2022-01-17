@@ -34,7 +34,7 @@ public class CallByValue {
         System.out.println("c = " + c.value);
         System.out.println("d = " + d.value);
         System.out.println("======");
-        swap(c,d);
+        swap(c, d);
         System.out.println("after");
         System.out.println("c = " + c.value);
         System.out.println("d = " + d.value);

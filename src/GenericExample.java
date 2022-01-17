@@ -24,11 +24,11 @@ class GenericExample<T> {
     }
 }
 
-interface IGenericExample<T>{
+interface IGenericExample<T> {
     T example();
 }
 
-class GenericExample2 implements IGenericExample<String>{
+class GenericExample2 implements IGenericExample<String> {
     @Override
     public String example() {
         return null;

@@ -1,7 +1,7 @@
 package designpattern.command.second;
 
 public class Serving {
-    public void serve(){
+    public void serve() {
         System.out.println("serving");
     }
 }
