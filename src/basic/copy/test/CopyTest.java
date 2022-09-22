@@ -24,10 +24,7 @@ public class CopyTest {
          * 1. 복사 생성자를 이용한 방법
          */
         Developia developiaMain2 = new Developia("A", 10000);
-        Developia developia2 = new Developia();
-        developia2.setName(developiaMain2.getName());
-        // 실무에서는 setMoney와 같은 동작이 제한 될 수 있음
-        developia2.setMoney(developiaMain2.getMoney());
+        Developia developia2 = new Developia(developiaMain2);
 
         developia2.spendMoney(1000);
         System.out.println("developia2 = " + developia2);
@@ -48,12 +45,12 @@ public class CopyTest {
 
         /*
          * 깊은 복사(deep copy)
-         * 3. 직접 객체 생성
+         * 3. 직접 객체를 생성하여 복사하는 방법
          */
         Developia developiaMain4 = new Developia("A", 10000);
         Developia developia4 = new Developia();
         developia4.setName(developiaMain4.getName());
-        // 마찬가지로 set 메소드가 제한될 수 있음
+        // 실무에서는 setMoney와 같은 동작이 제한 될 수 있음
         developia4.setMoney(developiaMain4.getMoney());
 
         developia4.spendMoney(1000);

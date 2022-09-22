@@ -1,6 +1,6 @@
 package basic.copy;
 
-public class Developia implements Cloneable{
+public class Developia implements Cloneable {
     public String name;
     public Integer money;
 
