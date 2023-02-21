@@ -20,4 +20,20 @@ public class Student implements Comparable<Student> {
         return this.age - student.age;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", number=" + number +
+                '}';
+    }
 }

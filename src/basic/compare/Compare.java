@@ -1,11 +1,15 @@
 package basic.compare;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class Compare {
     public static void main(String[] args) {
-        Student student = new Student("a",20,2);
-        Student student2 = new Student("b",22,1);
+        Student student = new Student("a",20,5);
+        Student student2 = new Student("b",22,2);
+        Student student3 = new Student("c",27,4);
 
         System.out.println(student.compareTo(student2)); // -2
 
@@ -27,5 +31,18 @@ public class Compare {
         System.out.println("익명 클래스 사용");
         System.out.println(com1.compare(student, student2)); // 1
 
+
+        List<Student> list = new ArrayList<>();
+        list.add(student);
+        list.add(student2);
+        list.add(student3);
+        System.out.println("before = " + list);
+        // 나이 내림차순
+        Collections.sort(list, (s1, s2) -> s2.getAge() - s1.getAge());
+        System.out.println("나이 내림차순 = " + list);
+
+        // number 내림차순
+        Collections.sort(list, (s1, s2) -> s2.getNumber() - s1.getNumber());
+        System.out.println("number 내림차순 = " + list);
     }
 }
