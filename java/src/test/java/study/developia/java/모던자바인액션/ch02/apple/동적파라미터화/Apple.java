@@ -1,4 +1,4 @@
-package modernjavainaction.apple;
+package study.developia.java.모던자바인액션.ch02.apple.동적파라미터화;
 
 public class Apple {
     private Integer weight;
@@ -32,9 +32,4 @@ public class Apple {
                 ", color=" + color +
                 '}';
     }
-}
-
-enum Color {
-    GREEN,
-    RED
 }
