@@ -109,6 +109,17 @@ public class Lambda {
         );
     }
 
+    @Test
+    void test8() {
+        int number = 10;
+        Runnable r = () -> System.out.println(number); // number는 자유 변수
+        // 자유 변수를 람다에서 사용하는 것을 람다 캡쳐링이라고 하며 명시적으로 final로 선언되어 있거나
+        // final로 선언된 변수와 똑같이 사용되어야한다.
+
+//        number = 11; // 불가능
+
+    }
+
 }
 
 
