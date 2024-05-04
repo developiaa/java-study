@@ -57,7 +57,15 @@ public class Partitioning {
     }
 
     private boolean isPrime(int candidate) {
-        return IntStream.range(2, candidate)
+        int candidateRoot = (int) Math.sqrt((double) candidate);
+        return IntStream.range(2, candidateRoot)
+                .noneMatch(i -> candidate % i == 0);
+    }
+
+    public static boolean isPrime(List<Integer> primes, int candidate) {
+        int candidateRoot = (int) Math.sqrt((double) candidate);
+        return primes.stream()
+                .takeWhile(i -> i <= candidateRoot)
                 .noneMatch(i -> candidate % i == 0);
     }
 
