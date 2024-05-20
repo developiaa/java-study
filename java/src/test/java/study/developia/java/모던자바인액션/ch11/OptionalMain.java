@@ -114,7 +114,7 @@ public class OptionalMain {
 
         Assertions.assertThat(5).isEqualTo(readDurationWithOptional2(props, "a"));
         Assertions.assertThat(0).isEqualTo(readDurationWithOptional2(props, "b"));
-        Assertions.assertThat(0).isEqualTo(readDurationWithOptional2(props, "c"));\
+        Assertions.assertThat(0).isEqualTo(readDurationWithOptional2(props, "c"));
     }
 
     public int readDuration(Properties props, String name) {
