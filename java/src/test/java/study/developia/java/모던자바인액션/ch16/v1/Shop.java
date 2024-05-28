@@ -1,5 +1,7 @@
 package study.developia.java.모던자바인액션.ch16.v1;
 
+import lombok.Getter;
+
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
