@@ -1,16 +1,15 @@
-package printer;
+package control.printer;
 
 import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static util.MyLogger.log;
-import static util.ThreadUtils.sleep;
 
-public class MyPrinterV1 {
+public class MyPrinterV3 {
     public static void main(String[] args) {
         Printer printer = new Printer();
-        Thread thread = new Thread(printer, "printer");
+        Thread thread = new Thread(printer, "control/printer");
         thread.start();
 
         Scanner userInput = new Scanner(System.in);
@@ -18,7 +17,7 @@ public class MyPrinterV1 {
             log("프린터할 문서를 입력하세요. 종료(q) : ");
             String input = userInput.nextLine();
             if (input.equals("q")) {
-                printer.work = false;
+                thread.interrupt();
                 break;
             }
             printer.addJob(input);
@@ -26,20 +25,24 @@ public class MyPrinterV1 {
     }
 
     static class Printer implements Runnable {
-        volatile boolean work = true;
 
         Queue<String> jobQueue = new ConcurrentLinkedQueue<>();
 
         @Override
         public void run() {
-            while (work) {
+            while (!Thread.interrupted()) {
                 if (jobQueue.isEmpty()) {
                     continue;
                 }
-                String job = jobQueue.poll();
-                log("출력 시작 : " + job + ", 대기 문서 : " + jobQueue);
-                sleep(3000);
-                log("출력 완료");
+                try {
+                    String job = jobQueue.poll();
+                    log("출력 시작 : " + job + ", 대기 문서 : " + jobQueue);
+                    Thread.sleep(3000);
+                    log("출력 완료");
+                } catch (InterruptedException e) {
+                    log("인터럽트!");
+                    break;
+                }
             }
             log("프린터 종료");
         }
