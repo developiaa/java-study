@@ -1,7 +1,7 @@
 package cas.increment;
 
-public class BasicInteger implements IncrementInteger {
-    private int value;
+public class VolatileInteger implements IncrementInteger {
+    private volatile int value;
 
     @Override
     public void increment() {
