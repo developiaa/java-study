@@ -19,11 +19,11 @@ public class CasMainV2 {
 
     private static int incrementAndGet(AtomicInteger atomicInteger) {
         int getValue;
-        boolean result = true;
+        boolean result;
         do {
             getValue = atomicInteger.get();
             log("getValue = " + getValue);
-            atomicInteger.compareAndSet(getValue, getValue + 1);
+            result = atomicInteger.compareAndSet(getValue, getValue + 1);
             log("result: " + result);
         } while (!result);
 
