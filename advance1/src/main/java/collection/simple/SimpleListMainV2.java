@@ -3,13 +3,15 @@ package collection.simple;
 import collection.simple.list.BasicList;
 import collection.simple.list.SimpleList;
 import collection.simple.list.SyncList;
+import collection.simple.list.SyncProxyList;
 
 import static util.MyLogger.log;
 
 public class SimpleListMainV2 {
     public static void main(String[] args) throws InterruptedException {
 //        test(new BasicList());
-        test(new SyncList());
+//        test(new SyncList());
+        test(new SyncProxyList(new BasicList()));
     }
 
     private static void test(SimpleList list) throws InterruptedException {
