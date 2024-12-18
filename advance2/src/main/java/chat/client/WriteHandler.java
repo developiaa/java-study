@@ -23,7 +23,7 @@ public class WriteHandler implements Runnable {
         Scanner scanner = new Scanner(System.in);
         try {
             String username = inputUsername(scanner); // 블로킹
-            output.writeUTF("/join " + DELIMITER + username);
+            output.writeUTF("/join" + DELIMITER + username);
 
             while (true) {
                 String toSend = scanner.nextLine();
