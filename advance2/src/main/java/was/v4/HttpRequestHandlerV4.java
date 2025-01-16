@@ -87,7 +87,7 @@ public class HttpRequestHandlerV4 implements Runnable {
     }
 
     private static void notFound(HttpResponse response) {
-        response.setStatus(404);
+        response.setStatusCode(404);
         response.writeBody("<h1>404 페이지를 찾을 수 없습니다.</h1>");
     }
 }

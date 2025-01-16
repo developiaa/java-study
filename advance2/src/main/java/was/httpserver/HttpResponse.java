@@ -14,7 +14,7 @@ public class HttpResponse {
         this.writer = writer;
     }
 
-    public void setStatus(int statusCode) {
+    public void setStatusCode(int statusCode) {
         this.statusCode = statusCode;
     }
 
