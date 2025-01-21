@@ -10,7 +10,7 @@ public class MethodV2 {
         // 정적 메서드 호출 - 일반적인 메서드 호출
         BasicData helloInstance = new BasicData();
         helloInstance.call(); // 이 부분은 코드를 변경하지 않는 이상 정적이다.
-        // 동적 메서드 호출 - 리플렉션 사요
+        // 동적 메서드 호출 - 리플렉션 사용
         Class<? extends BasicData> helloClass = helloInstance.getClass();
         String methodName = "hello";
         // 메서드 이름을 변수로 변경할 수 있다.
