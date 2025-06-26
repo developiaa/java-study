@@ -3,4 +3,5 @@ rootProject.name = 'java-study'
 include 'java'
 include 'advance1'
 include 'advance2'
+include 'design-pattern'
 
