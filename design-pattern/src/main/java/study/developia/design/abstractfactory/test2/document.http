@@ -1,0 +1,8 @@
+###
+localhost:8080/document/v1?type=word
+
+###
+localhost:8080/document/v1?type=word
+
+### 에러
+localhost:8080/document/v1?type=doc
