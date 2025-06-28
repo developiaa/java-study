@@ -3,7 +3,7 @@ package study.developia.design.abstractfactory.test2.processor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public abstract class DocumentProcessor {
+public abstract class DocumentProcessor implements DocumentTypeProvider {
     public final void process(String fileName) {
         logStart(fileName);
         read(fileName);

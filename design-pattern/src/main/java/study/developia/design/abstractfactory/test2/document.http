@@ -2,7 +2,17 @@
 localhost:8080/document/v1?type=word
 
 ###
-localhost:8080/document/v1?type=word
+localhost:8080/document/v1?type=pdf
 
 ### 에러
 localhost:8080/document/v1?type=doc
+
+
+###
+localhost:8080/document/v2?type=word
+
+###
+localhost:8080/document/v2?type=pdf
+
+### 에러
+localhost:8080/document/v2?type=doc
